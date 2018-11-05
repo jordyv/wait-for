@@ -1,7 +1,7 @@
 FROM golang:alpine AS builder
 ENV WORKPATH=/go/src/github.com/jordyv/wait-for
 COPY . $WORKPATH
-RUN apk add --update --no-cache curl make
+RUN apk add --update --no-cache curl make git
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 RUN cd $WORKPATH && dep ensure -v
 RUN cd $WORKPATH && make build
