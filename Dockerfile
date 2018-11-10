@@ -1,8 +1,8 @@
 FROM golang:alpine AS builder
 WORKDIR /go/src/github.com/jordyv/wait-for
 COPY . .
-RUN apk add --update --no-cache curl make git
-RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+RUN apk add --update --no-cache make git
+RUN wget -O - https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 RUN dep ensure -v
 RUN make build
 
