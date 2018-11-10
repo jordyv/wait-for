@@ -7,7 +7,7 @@ test:
 	go test ./...
 
 clean:
-	rm dist/*
+	rm -f dist/*
 
 build_all: deps
 	GOARCH=arm GOOS=linux go build -o dist/wait-for_linux_arm main.go
