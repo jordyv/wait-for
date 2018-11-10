@@ -3,7 +3,6 @@ WORKDIR /go/src/github.com/jordyv/wait-for
 COPY . .
 RUN apk add make git
 RUN wget -O - https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-RUN dep ensure -v
 RUN make build
 
 FROM alpine
