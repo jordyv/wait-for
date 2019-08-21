@@ -1,5 +1,7 @@
 # wait-for #
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/jordyv/wait-for)](https://goreportcard.com/report/github.com/jordyv/wait-for)
+
 Utility to wait for the following cases:
 
  - wait for a TCP port to get open
